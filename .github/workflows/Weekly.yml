@@ -51,7 +51,7 @@ jobs:
 
       - name: Run Spider
         run: |
-          python Pixiv_Spider/main.py -p {} -c true -t weekly -s true -i ${{ secrets.CHANNEL_ID }} -b ${{ secrets.BOT_TOKEN }}
+          python Pixiv_Spider/main.py -p {} -c true -t weekly -s false -i ${{ secrets.CHANNEL_ID }} -b ${{ secrets.BOT_TOKEN }}
 
       - name: Upload Compressed
         uses: actions/upload-artifact@v2
@@ -66,10 +66,10 @@ jobs:
           git add *.png *.jpg
           git commit -m "Weekly Spider" -a
           git config pull.rebase true
-          #git pull origin photos --allow-unrelated-histories
+          git pull origin master --allow-unrelated-histories
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ github.token }}
-          #branch: photos
+          branch: master
