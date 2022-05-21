@@ -1,0 +1,3 @@
+[submodule "Pixiv_Spider"]
+	path = Pixiv_Spider
+	url = https://github.com/Wine-Network/Pixiv_Spider
