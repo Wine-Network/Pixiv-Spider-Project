@@ -32,6 +32,7 @@ jobs:
 
       - name: Clone Pixiv_Spider
         run: |
+            ls
             cd Pixiv_Spider
             git submodule init
             git submodule update
