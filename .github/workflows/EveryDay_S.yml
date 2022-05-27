@@ -47,7 +47,7 @@ jobs:
 
       - name: Run Spider
         run: |
-          python Pixiv_Spider/main.py -p {} -c true -t daily -s true -i ${{ secrets.CHANNEL_ID_S }} -b ${{ secrets.BOT_TOKEN }}
+          python Pixiv_Spider/main.py -p {} -c true -t daily_r18 -s true -i ${{ secrets.CHANNEL_ID_S }} -b ${{ secrets.BOT_TOKEN }}
 
       - name: Upload Compressed
         uses: actions/upload-artifact@v2
