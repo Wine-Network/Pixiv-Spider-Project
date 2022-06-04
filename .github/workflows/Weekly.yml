@@ -66,7 +66,6 @@ jobs:
           git add *.png *.jpg
           git commit -m "Weekly Spider" -a
           git config pull.rebase true
-          #git pull origin photos --allow-unrelated-histories
       
      
       - name: Push changes
